@@ -27,7 +27,7 @@ function searchNear(arr, num) {
     }
     if (lNum < rNum) {
         return {
-            index: right,
+            index: left,
             value: arr[left]
         }
     }
