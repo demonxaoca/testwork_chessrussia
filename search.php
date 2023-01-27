@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-function searchNear ($arr, $num) 
+function searchNear (Array $arr, int $num) 
 {
     $left = -1;
     $right = count($arr);
