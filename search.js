@@ -6,7 +6,10 @@ function searchNear(arr, num) {
         middle = Math.floor((right+left)/2)
        
         if (arr[middle] === num) {
-            return arr[middle]
+            return {
+                index: right,
+                value: arr[middle]
+            }
         }
         if (num < arr[middle]) {
             right = middle
@@ -23,9 +26,15 @@ function searchNear(arr, num) {
         rNum = arr[right] - num
     }
     if (lNum < rNum) {
-        return arr[left]
+        return {
+            index: right,
+            value: arr[left]
+        }
     }
-    return arr[right]
+    return {
+        index: right,
+        value: arr[right]
+    }
 }
 
 console.log(searchNear([1,5,6,8,10,20,40,61], 54))
